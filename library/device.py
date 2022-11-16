@@ -17,6 +17,9 @@ class ClassDevice:
         try:
             date_now   = datetime.now()
             time_stamp = date_now.strftime("%d-%m-%y_%H_%M")
+
+            print("connecting to device: "+ip)
+            
             ### Proses Connect ke Device
             device = {
                 'device_type': 'cisco_ios'
@@ -30,8 +33,6 @@ class ClassDevice:
             #Function dari modul netmiko
             connect_device = ConnectHandler(**device)
             connect_device.enable()
-
-            print("connecting to device: "+ip)
 
             #Mencari Hostname
             req_hostname = connect_device.send_command('show running-config | in hostname')
