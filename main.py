@@ -1,12 +1,12 @@
 from datetime import datetime
 import library.readFile as rf
 import library.connect_device as cd
+from library.device import ClassDevice
 
-# ListIP = rf.read("list_ip","txt","r")
-# ListCommand = rf.read("list_command","txt","r")
+cisco = ClassDevice()
 
-# # print(ListIP)
-# # print(ListCommand)
+ListIP = cisco.read("list_ip","txt","r")
+ListCommand = cisco.read("list_command","txt","r")
 
 def main():
     # Menerima input username dan password
@@ -15,7 +15,7 @@ def main():
     secrets = input("Masukan enable secret ? ")
 
     for ip in ListIP:
-        print(cd.connect_device(ip,username,password,secrets))
+        print(cisco.connect_device(ip,ListCommand,username,password,secrets))
 
 main()
 

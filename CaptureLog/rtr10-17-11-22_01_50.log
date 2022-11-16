@@ -1,0 +1,28 @@
+
+show running-config | in hostname
+hostname rtr10
+
+
+show ver | include , Version
+Cisco IOS XE Software, Version 17.03.05
+Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.5, RELEASE SOFTWARE (fc2)
+
+
+show inven
+NAME: "Chassis", DESCR: "Cisco CSR1000V Chassis"
+PID: CSR1000V          , VID: V00  , SN: 9BXYW1KLEVI
+
+NAME: "module R0", DESCR: "Cisco CSR1000V Route Processor"
+PID: CSR1000V          , VID: V00  , SN: JAB1303001C
+
+NAME: "module F0", DESCR: "Cisco CSR1000V Embedded Services Processor"
+PID: CSR1000V          , VID:      , SN:            
+
+
+
+
+show module
+              ^
+% Invalid input detected at '^' marker.
+
+
