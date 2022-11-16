@@ -2,11 +2,11 @@ from datetime import datetime
 import library.readFile as rf
 import library.connect_device as cd
 
-ListIP = rf.read("list_ip","txt","r")
-ListCommand = rf.read("list_command","txt","r")
+# ListIP = rf.read("list_ip","txt","r")
+# ListCommand = rf.read("list_command","txt","r")
 
-# print(ListIP)
-# print(ListCommand)
+# # print(ListIP)
+# # print(ListCommand)
 
 def main():
     # Menerima input username dan password
